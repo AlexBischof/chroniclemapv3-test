@@ -4,7 +4,6 @@ import net.openhft.chronicle.map.ChronicleMap;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Random;
 
 import static java.lang.Integer.valueOf;
 
@@ -43,6 +42,10 @@ class VorwahlCacheImpl implements VorwahlCache {
 
     public CharSequence put(String key, CharSequence city) {
         return vorwahlCache.put(valueOf(key), city);
+    }
+
+    public int size() {
+        return vorwahlCache.size();
     }
 
     @Override
